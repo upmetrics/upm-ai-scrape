@@ -1,6 +1,5 @@
 # Packages
 node_modules/
-package-lock.json
 
 # Log files
 logs/
@@ -15,3 +14,4 @@ testing/
 .husky/_/
 lib/
 docs/out/
+/.idea/

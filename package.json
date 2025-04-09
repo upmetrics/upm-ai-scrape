@@ -1,0 +1,62 @@
+{
+  "name": "duck-duck-scrape",
+  "version": "2.2.7",
+  "description": "Search from DuckDuckGo and use it's spice APIs.",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "author": "Snazzah",
+  "contributors": [
+    "suushii"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/Snazzah/duck-duck-scrape",
+  "homepage": "https://duck-duck-scrape.js.org/",
+  "keywords": [
+    "duckduckgo",
+    "ddg",
+    "search",
+    "api"
+  ],
+  "bugs": {
+    "url": "https://github.com/Snazzah/duck-duck-scrape/issues"
+  },
+  "funding": {
+    "url": "https://github.com/sponsors/Snazzah"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:prepare": "shx test -d ./lib || npm run build",
+    "changelog": "tsx scripts/changelog",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "nyc mocha -r tsx --extension ts 'test/**/*.ts'",
+    "gpr": "tsx scripts/gpr",
+    "docs": "typedoc",
+    "prepare": "npm run build:prepare",
+    "prepublishOnly": "(shx test -d ./lib || (echo \"lib folder does not exist\" && exit 1)) && npm run lint:fix"
+  },
+  "dependencies": {
+    "html-entities": "^2.3.3",
+    "needle": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/mocha": "^10.0.1",
+    "@types/needle": "^3.2.0",
+    "@types/node": "^18.19.86",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.30.0",
+    "eslint-config-snazzah": "^1.2.1",
+    "mocha": "^10.2.0",
+    "nock": "^13.2.9",
+    "nyc": "^15.1.0",
+    "prettier": "^2.8.1",
+    "shx": "^0.3.4",
+    "tsx": "^4.19.2",
+    "typedoc": "^0.25.4",
+    "typescript": "^5.3.3",
+    "yarn": "^1.22.19"
+  }
+}

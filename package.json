@@ -37,8 +37,7 @@
   },
   "dependencies": {
     "html-entities": "^2.6.0",
-    "needle": "^3.3.1",
-    "puppeteer": "^24.6.0"
+    "needle": "^3.3.1"
   },
   "devDependencies": {
     "@types/chai": "^4.3.4",

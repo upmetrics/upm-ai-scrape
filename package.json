@@ -36,8 +36,8 @@
     "prepublishOnly": "(shx test -d ./lib || (echo \"lib folder does not exist\" && exit 1)) && npm run lint:fix"
   },
   "dependencies": {
-    "html-entities": "^2.3.3",
-    "needle": "^3.2.0"
+    "html-entities": "^2.6.0",
+    "needle": "^3.3.1"
   },
   "devDependencies": {
     "@types/chai": "^4.3.4",
